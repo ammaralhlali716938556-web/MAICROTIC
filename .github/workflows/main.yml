@@ -7,6 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
     
@@ -23,6 +24,9 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
+    - name: Show folder contents
+      run: ls -la
 
     - name: Build Debug APK
       run: gradle assembleDebug
